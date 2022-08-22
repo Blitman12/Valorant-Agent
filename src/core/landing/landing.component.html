@@ -1,6 +1,16 @@
-<div class="agent-container">
+<!-- <div class="agent-container">
   <div *ngFor="let agent of agents" class="agent">
     <img src="{{ agent.displayIcon }}" alt="{{ agent.displayName }}" />
     <h2>{{ agent.displayName }}</h2>
   </div>
+</div> -->
+<div class="agent-container">
+  <mat-card *ngFor="let agent of agents">
+    <img mat-card-image src="{{ agent.displayIcon }}" />
+    <mat-card-title>{{ agent.displayName }}</mat-card-title>
+    <mat-card-subtitle>{{ agent.role.displayName }}</mat-card-subtitle>
+    <mat-card-subtitle *ngIf="agent.characterTags">{{
+      getCharacterTags(agent)
+    }}</mat-card-subtitle>
+  </mat-card>
 </div>

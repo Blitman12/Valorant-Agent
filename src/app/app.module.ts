@@ -10,6 +10,7 @@ import { SharedModule } from 'src/shared/shared.module';
 import { environment } from 'src/environments/environment';
 import { LandingModule } from 'src/core/landing/landing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent],
@@ -27,6 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
       actionsBlocklist: actionBlockList(),
       logOnly: !environment.production,
     }),
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

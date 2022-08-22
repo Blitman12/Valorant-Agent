@@ -26,6 +26,11 @@ export class LandingComponent extends BaseComponent implements OnInit {
     this.setupSubscriptions();
   }
 
+  public getCharacterTags(agent: Agent): string {
+    const characterTags = agent.characterTags;
+    return characterTags.join(', ');
+  }
+
   private setupSubscriptions(): void {
     this._subscriptions.push(
       this._landingSelector.agentInfo$.subscribe(

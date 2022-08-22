@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
-import { BaseComponent } from './bases/base.component';
+import { MatCardModule } from '@angular/material/card';
+
 import { ValorantService } from './services/valorant.service';
 
 @NgModule({
-  imports: [],
-  exports: [],
+  imports: [MatCardModule],
+  exports: [MatCardModule],
   providers: [ValorantService],
 })
 export class SharedModule {}
