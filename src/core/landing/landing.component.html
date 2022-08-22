@@ -1,1 +1,6 @@
-<p>landing works!</p>
+<div class="agent-container">
+  <div *ngFor="let agent of agents" class="agent">
+    <img src="{{ agent.displayIcon }}" alt="{{ agent.displayName }}" />
+    <h2>{{ agent.displayName }}</h2>
+  </div>
+</div>
